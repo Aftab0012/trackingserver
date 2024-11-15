@@ -1,0 +1,74 @@
+{
+  "name": "email-management-plugin-engine",
+  "version": "0.0.1",
+  "description": "email-management-plugin-engine",
+  "scripts": {
+    "start": "node trackingServer.js",
+    "develop": "nodemon server.js",
+    "standard": "standard --fix",
+    "lint": "standard",
+    "lint-fix": "standard --fix"
+  },
+  "nodemonConfig": {
+    "env": {
+      "NODE_ENV": "development"
+    },
+    "watch": [
+      "controllers",
+      "routes",
+      "services"
+    ],
+    "events": {
+      "restart": "user -k 3005/tcp;"
+    },
+    "delay": "1500"
+  },
+  "pre-commit": [
+    "standard"
+  ],
+  "standard": {
+    "ignore": [
+      "/lib/"
+    ]
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7",
+    "pre-commit": "^1.2.2",
+    "standard": "^14.3.4"
+  },
+  "dependencies": {
+    "@sendgrid/mail": "^8.1.3",
+    "axios": "^1.6.8",
+    "bcrypt": "^5.1.1",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.1",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "firebase-admin": "^12.4.0",
+    "fs": "^0.0.1-security",
+    "google-auth-library": "^9.14.1",
+    "googleapis": "^144.0.0",
+    "helmet": "^7.1.0",
+    "jsonschema": "^1.4.1",
+    "jsonwebtoken": "^9.0.2",
+    "lodash": "^4.17.21",
+    "mime-types": "^2.1.35",
+    "moment": "^2.30.1",
+    "multer": "^1.4.5-lts.1",
+    "node-cron": "^3.0.3",
+    "nodemailer": "^6.9.16",
+    "passport": "^0.6.0",
+    "passport-jwt": "^4.0.1",
+    "pdf-lib": "^1.17.1",
+    "pg": "^8.12.0",
+    "readline": "^1.3.0",
+    "redis": "^3.0.2",
+    "sharp": "^0.33.5",
+    "stream": "^0.0.3",
+    "util": "^0.12.5",
+    "uuid": "^10.0.0",
+    "winston": "^3.16.0"
+  }
+}
