@@ -7,7 +7,8 @@
     "develop": "nodemon server.js",
     "standard": "standard --fix",
     "lint": "standard",
-    "lint-fix": "standard --fix"
+    "lint-fix": "standard --fix",
+    "build": "echo 'No build needed'"
   },
   "nodemonConfig": {
     "env": {
